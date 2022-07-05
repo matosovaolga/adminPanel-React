@@ -1,0 +1,48 @@
+.featured {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+
+	&Item {
+		flex: 1;
+		margin: 0 20px;
+		padding: 30px;
+	}
+
+	&Title {
+		font-size: 20px;
+	}
+
+	&Money{
+		font-size: 30px;
+		font-weight: bold;
+
+		&Container {
+			margin: 10px 0;
+			display: flex;
+			align-items: center;
+		}
+
+		&Rate {
+			display: flex;
+			align-items: center;
+			margin-left: 20px;
+		}
+	}
+
+	&Icon {
+		font-size: 14px;
+		margin-left: 5px;
+		color: green;
+
+		&.negative {
+			color: red;
+		}
+	}
+
+	&Sub {
+		font-size: 15px;
+		color: #333;
+	}
+	
+}

@@ -1,0 +1,35 @@
+ .userList {
+ 	flex: 4;
+
+ 	&User {
+ 		display: flex;
+ 		align-items: center;
+ 	}
+
+ 	&Edit {
+ 		border-radius: 4px;
+ 		padding: 5px 12px;
+ 		background-color: #3bb077;
+ 		color: #fff;
+ 		cursor: pointer;
+ 		margin-right: 20px;
+
+ 		&:hover {
+ 			background-color: darken(#3bb077, 20%) 	
+
+ 		}
+ 	}
+
+ 	&Delete {
+ 		color: red;
+ 		cursor: pointer;
+ 	}
+ }
+
+ .userImg {
+ 	width: 32px;
+ 	height: 32px;
+ 	border-radius: 50%;
+ 	object-fit: cover;
+ 	margin-right: 10px;
+ }

@@ -1,0 +1,44 @@
+
+.sidebar {
+	flex: 1;
+	height: calc(100vh - 70px);
+	background: #405189;
+	position: sticky;
+	top: 70px;
+
+	&Wrapper {
+		padding: 20px;
+		color: #fff;
+
+
+	}
+
+	&Menu {
+		margin-bottom: 20px;
+	}
+
+	&List {
+
+		&Item {
+			color: #abb9e8;
+			font-size: 14px;
+			cursor: pointer;
+			padding: 5px;
+			display: flex;
+			align-items: center;
+			border-radius: 5px;
+
+			&.active,
+			&:hover {
+				color: white;
+				background: darken(#405189, 10%)
+			}
+
+		}
+	}
+
+	&Icon {
+		margin-right: 5px;
+		font-size: 20px;
+	}
+}
