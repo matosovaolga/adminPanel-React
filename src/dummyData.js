@@ -21,6 +21,10 @@ export const userRows = [
     email: 'jon@gmail.com',
     status: "active",
     transaction: "$120.00",
+    phone: '+1 890 900 000',
+    birthday: '20/01/1987',
+    position: 'Designer',
+     location: 'New York',
     avatar: "https://themesbrand.com/velzon/html/default/assets/images/users/avatar-1.jpg"
   },
   { 
@@ -29,6 +33,10 @@ export const userRows = [
     email: 'jon@gmail.com',
     status: "active",
     transaction: "$120.00",
+    phone: '+1 890 900 000',
+    birthday: '20/01/1987',
+    position: 'Designer',
+     location: 'New York',
     avatar: "https://themesbrand.com/velzon/html/default/assets/images/users/avatar-1.jpg"
   },
 
@@ -38,6 +46,10 @@ export const userRows = [
     email: 'jon@gmail.com',
     status: "active",
     transaction: "$120.00",
+    phone: '+1 890 900 000',
+    birthday: '20/01/1987',
+    position: 'Designer',
+     location: 'New York',
     avatar: "https://themesbrand.com/velzon/html/default/assets/images/users/avatar-1.jpg"
   }, { 
     id: 4, 
@@ -45,6 +57,10 @@ export const userRows = [
     email: 'jon@gmail.com',
     status: "active",
     transaction: "$120.00",
+    phone: '+1 890 900 000',
+    birthday: '20/01/1987',
+    position: 'Designer',
+     location: 'New York',
     avatar: "https://themesbrand.com/velzon/html/default/assets/images/users/avatar-1.jpg"
   } ,{ 
     id: 5, 
@@ -52,6 +68,10 @@ export const userRows = [
     email: 'jon@gmail.com',
     status: "active",
     transaction: "$120.00",
+    phone: '+1 890 900 000',
+    birthday: '20/01/1987',
+    position: 'Designer',
+     location: 'New York',
     avatar: "https://themesbrand.com/velzon/html/default/assets/images/users/avatar-1.jpg"
   }, { 
     id: 6, 
@@ -59,6 +79,10 @@ export const userRows = [
     email: 'jon@gmail.com',
     status: "active",
     transaction: "$120.00",
+    phone: '+1 890 900 000',
+    birthday: '20/01/1987',
+    position: 'Designer',
+     location: 'New York',
     avatar: "https://themesbrand.com/velzon/html/default/assets/images/users/avatar-1.jpg"
   }, { 
     id: 7, 
@@ -66,6 +90,10 @@ export const userRows = [
     email: 'jon@gmail.com',
     status: "active",
     transaction: "$120.00",
+    phone: '+1 890 900 000',
+    birthday: '20/01/1987',
+    position: 'Designer',
+     location: 'New York',
     avatar: "https://themesbrand.com/velzon/html/default/assets/images/users/avatar-1.jpg"
   }, { 
     id: 8, 
@@ -73,6 +101,10 @@ export const userRows = [
     email: 'jon@gmail.com',
     status: "active",
     transaction: "$120.00",
+    phone: '+1 890 900 000',
+    birthday: '20/01/1987',
+    position: 'Designer',
+     location: 'New York',
     avatar: "https://themesbrand.com/velzon/html/default/assets/images/users/avatar-1.jpg"
   }, { 
     id: 9, 
@@ -80,6 +112,10 @@ export const userRows = [
     email: 'jon@gmail.com',
     status: "active",
     transaction: "$120.00",
+    phone: '+1 890 900 000',
+    birthday: '20/01/1987',
+    position: 'Designer',
+     location: 'New York',
     avatar: "https://themesbrand.com/velzon/html/default/assets/images/users/avatar-1.jpg"
   }, { 
     id: 10, 
@@ -87,6 +123,10 @@ export const userRows = [
     email: 'jon@gmail.com',
     status: "active",
     transaction: "$220.00",
+    phone: '+1 890 900 000',
+    birthday: '20/01/1987',
+    position: 'Designer',
+    location: 'New York',
     avatar: "https://themesbrand.com/velzon/html/default/assets/images/users/avatar-1.jpg"
   } 
     

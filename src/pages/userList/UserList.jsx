@@ -39,7 +39,10 @@ export default function UserList() {
   renderCell: (params) => {
     return(
     <>
-      <Link to={"/user/" + params.row.id}>
+      <Link 
+        to={"/user/" + params.row.id} 
+        state={ params.row }
+        >
         <button className="userListEdit">Edit</button>
       </Link>
       

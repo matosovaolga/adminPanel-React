@@ -23,7 +23,7 @@ class App extends Component  {
                    
                      <Route exact path="/" element={<Home/>} />
                      <Route path="/users" element={<UserList/>} /> 
-                     <Route path="/user/:userId" element={<User />} />
+                     <Route path="/user/:userId" element={<User  />}  />
 
                 </Route>
             </Routes>

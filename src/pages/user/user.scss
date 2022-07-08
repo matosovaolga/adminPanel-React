@@ -1,3 +1,102 @@
 .user {
 	flex: 4;
+	padding: 20px;
+
+	&TitleContainer {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+	}
+	&Title {
+		font-weight: bold;
+	}
+
+	&AddButton{
+		width: 80px;
+		border: none;
+		padding: 5px;
+		background-color: teal;
+		color: #fff;
+		background-repeat: 5px;
+		cursor: pointer;
+		font-size: 16px;
+	}
+
+	&Container{
+		display: flex;
+		align-items: space-between;
+		margin-top: 20px;
+
+	}
+
+	&Show{
+		flex: 1px;
+		padding: 20px;
+		margin-left: 0;
+
+		&Top {
+			display: flex;
+			align-items: center;
+
+			&Title {
+				display: flex;
+				flex-direction: column;
+				margin-left: 20px;
+
+			}
+
+		}
+		&Image {
+			width: 40px;
+			height: 40px;
+			border-radius: 50%;
+			object-fit: cover;
+
+		}
+
+		&User {
+			&Name {
+				font-weight: 600;
+
+			}
+			&Position {
+				font-weight: 300;
+			}
+		}
+
+		&Title {
+			font-style: 14px;
+			font-weight: 600;
+			color: rgb(175, 170, 170);
+
+		}
+
+		&Info {
+			display: flex;
+			align-items: center;
+			margin: 20px 0;
+			color: #444;
+
+			&Title {
+				margin-left: 10px;
+			}
+		}
+
+		&Bottom {
+			margin-top: 20px;
+		}
+
+		&Icon {
+			font-style: 16px!important;
+		}
+	}
+
+	&Update {
+		flex: 2;
+		margin-right: 0;
+	}
+
+
 }
+
