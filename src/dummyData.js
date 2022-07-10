@@ -17,20 +17,22 @@ export const userData = {
 export const userRows = [
   { 
     id: 1, 
-    username: 'Jon Snow',  
+    username: 'Jon Snow', 
+    login: 'Jhone99',
     email: 'jon@gmail.com',
     status: "active",
     transaction: "$120.00",
     phone: '+1 890 900 000',
     birthday: '20/01/1987',
     position: 'Designer',
-     location: 'New York',
+    location: 'New York',
     avatar: "https://themesbrand.com/velzon/html/default/assets/images/users/avatar-1.jpg"
   },
   { 
     id: 2, 
     username: 'Jon Snow',  
     email: 'jon@gmail.com',
+    login: 'Jhone99',
     status: "active",
     transaction: "$120.00",
     phone: '+1 890 900 000',
@@ -44,6 +46,7 @@ export const userRows = [
     id: 3, 
     username: 'Jon Snow',  
     email: 'jon@gmail.com',
+    login: 'Jhone99',
     status: "active",
     transaction: "$120.00",
     phone: '+1 890 900 000',
@@ -55,6 +58,7 @@ export const userRows = [
     id: 4, 
     username: 'Jon Snow',  
     email: 'jon@gmail.com',
+      login: 'Jhone99',
     status: "active",
     transaction: "$120.00",
     phone: '+1 890 900 000',
@@ -66,6 +70,7 @@ export const userRows = [
     id: 5, 
     username: 'Jon Snow',  
     email: 'jon@gmail.com',
+    login: 'Jhone99',
     status: "active",
     transaction: "$120.00",
     phone: '+1 890 900 000',
@@ -77,6 +82,7 @@ export const userRows = [
     id: 6, 
     username: 'Jon Snow',  
     email: 'jon@gmail.com',
+      login: 'Jhone99',
     status: "active",
     transaction: "$120.00",
     phone: '+1 890 900 000',
@@ -87,6 +93,7 @@ export const userRows = [
   }, { 
     id: 7, 
     username: 'Jon Snow',  
+      login: 'Jhone99',
     email: 'jon@gmail.com',
     status: "active",
     transaction: "$120.00",
@@ -97,7 +104,8 @@ export const userRows = [
     avatar: "https://themesbrand.com/velzon/html/default/assets/images/users/avatar-1.jpg"
   }, { 
     id: 8, 
-    username: 'Jon Snow',  
+    username: 'Jon Snow', 
+      login: 'Jhone99', 
     email: 'jon@gmail.com',
     status: "active",
     transaction: "$120.00",
@@ -109,6 +117,7 @@ export const userRows = [
   }, { 
     id: 9, 
     username: 'Jon Snow',  
+      login: 'Jhone99',
     email: 'jon@gmail.com',
     status: "active",
     transaction: "$120.00",
@@ -119,7 +128,8 @@ export const userRows = [
     avatar: "https://themesbrand.com/velzon/html/default/assets/images/users/avatar-1.jpg"
   }, { 
     id: 10, 
-    username: 'Jon Snow',  
+    username: 'Jon Snow',
+      login: 'Jhone99',  
     email: 'jon@gmail.com',
     status: "active",
     transaction: "$220.00",

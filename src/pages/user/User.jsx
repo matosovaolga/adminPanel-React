@@ -1,10 +1,10 @@
 import "./user.scss";
-import { PermIdentity, CalendarToday, PhoneIphone, MailOutline, LocationOn } from '@mui/icons-material';
+import { PermIdentity, CalendarToday, PhoneIphone, MailOutline, LocationOn, Publish } from '@mui/icons-material';
 import { useLocation } from "react-router-dom";
 
 
 export default function User(){
-	const {username, avatar,position, birthday, phone, map, email, location} = useLocation().state;
+	const {username, avatar,position, birthday, phone, map, email, location, login} = useLocation().state;
   console.log(useLocation().state)
 		return (
 			<div className="user">
@@ -25,7 +25,7 @@ export default function User(){
 							<span className="userShowTitle">Account Details</span>
 							<div className="userShowInfo">
 								<PermIdentity className="userShowIcon"/>
-								<span className="userShowInfoTitle"></span>
+								<span className="userShowInfoTitle">{login}</span>
 							</div>
 							<div className="userShowInfo">
 								<CalendarToday className="userShowIcon"/>
@@ -47,7 +47,61 @@ export default function User(){
 						
 						</div>
 					</div>
-					<div className="userUpdate widget"></div>
+					<div className="userUpdate widget">
+						<span className="userUpdateTitle">Edit</span>
+						<form className="userUpdateForm">
+							<div className="userUpdateLeft">
+								<div className="userUpdateItem">
+									<label>Username</label>
+									<input 
+										type="text"
+										placeholder={login}
+										className="userUpdateInput"
+									/>
+								</div>	
+								<div className="userUpdateItem">
+									<label>Full name</label>
+									<input 
+										type="text"
+										placeholder={username}
+										className="userUpdateInput"
+									/>
+								</div>
+								<div className="userUpdateItem">
+									<label>Email</label>
+									<input 
+										type="text"
+										placeholder={email}
+										className="userUpdateInput"
+									/>
+								</div>
+								<div className="userUpdateItem">
+									<label>Phone</label>
+									<input 
+										type="text"
+										placeholder={phone}
+										className="userUpdateInput"
+									/>
+								</div>
+								<div className="userUpdateItem">
+									<label>Adress</label>
+									<input 
+										type="text"
+										placeholder={location}
+										className="userUpdateInput"
+									/>
+								</div>
+							
+							</div>
+							<div className="userUpdateRight">
+								<div className="userUpdateUpload">
+									<img src={avatar} alt="" className="userUpdateImg" />
+									<label htmlFor="file"><Publish /></label>
+									<input type="file" id="file" style={{display: "none"}} />
+								</div>
+							</div>
+						</form>
+					</div>
 				</div>
 			</div>
 		);
