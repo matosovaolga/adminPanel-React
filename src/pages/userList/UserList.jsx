@@ -41,7 +41,7 @@ export default function UserList() {
     <>
       <Link 
         to={"/user/" + params.row.id} 
-        state={ params.row }
+        state={{ ...params.row }}
         >
         <button className="userListEdit">Edit</button>
       </Link>

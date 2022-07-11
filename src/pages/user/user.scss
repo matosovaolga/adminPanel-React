@@ -102,12 +102,66 @@
 			background-repeat: 10px;
 			object-fit: cover;
 			margin-right: 20px;
+			border-radius: 10px;
 		}
 
 		&Form {
 			display: flex;
 			justify-content: space-between;
 			margin-top: 20px;
+		}
+
+		&Title {
+			font-size: 24px;
+			font-weight: 600;
+		}
+
+		&Item {
+			display: flex;
+			flex-direction: column;
+			margin-top: 10px;
+
+			& > label {
+				margin-bottom: 5px;
+				font-size: 14px;
+			}
+		}
+
+		&Input {
+			border: none;
+			width: 250px;
+			height: 30px;
+			border-bottom: 1px solid gray;
+		}
+
+		&Right {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+		}
+
+		&Upload {
+			display: flex;
+			align-items: center;
+
+		}
+
+		&Icon {
+			cursor: pointer;
+
+		}
+
+		&Button {
+			border-radius: 5px;
+			border: none;
+			padding: 5px;
+			cursor: pointer;
+			background-color: #405189;
+			color: white;
+			font-weight: 600;
+			&:hover {
+				background-color: darken(#405189, 10%);
+			}
 		}
 	}
 
