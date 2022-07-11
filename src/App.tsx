@@ -29,14 +29,10 @@ class App extends Component  {
 
                 </Route>
             </Routes>
-           
-           
         </div>
-      
-
         </Router>
 
-     )
+     );
   }
  
    
@@ -44,9 +40,9 @@ class App extends Component  {
 
 
 export default connect(
-    state => ({ 
-    }),
-    dispatch => ({
+    // state => ({ 
+    // }),
+    // dispatch => ({
       
-    })
+    // })
   )(App);

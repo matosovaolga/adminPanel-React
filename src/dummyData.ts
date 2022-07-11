@@ -7,12 +7,12 @@ export const userData = {
       backgroundColor: 'rgba(255, 99, 132, 0.5)',
   
     },{
-    	label: 'Dataset 2',
-    	  data: [120, 190, 30, 250, 234, 378],
-    	      backgroundColor: 'rgba(53, 162, 235, 0.5)',
+      label: 'Dataset 2',
+      data: [120, 190, 30, 250, 234, 378],
+      backgroundColor: 'rgba(53, 162, 235, 0.5)',
     }
   ],
-}
+};
 
 export const userRows = [
   { 
@@ -151,4 +151,4 @@ export const userOptions = {
     }
   
   },
-}
+};

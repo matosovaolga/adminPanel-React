@@ -1,10 +1,9 @@
-import React, { Component } from 'react';
 import "./sidebar.scss";
 import { LineStyle, AutoGraph, TrendingUp, CurrencyBitcoin, Group, Storefront,
 MonetizationOn, Equalizer, MailOutline, Comment, Send, AssignmentLate, BadgeOutlined } from '@mui/icons-material';
 
-export default class Sidebar extends Component {
-	render() {
+export default function Sidebar(): JSX.Element {
+
 		return (
 			<div className="sidebar">
 				<div className="sidebarWrapper">
@@ -35,7 +34,7 @@ export default class Sidebar extends Component {
 						<ul className="sidebarList">
 							<li className="sidebarListItem text-sm">
 								<Group className="sidebarIcon" /> 
-								 Users
+								Users
 							</li>
 							<li className="sidebarListItem">
 							<Storefront  className="sidebarIcon" />
@@ -93,5 +92,4 @@ export default class Sidebar extends Component {
 				</div>
 			</div>
 		);
-	}
 }

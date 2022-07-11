@@ -4,8 +4,8 @@ import './widgetLg.scss';
 export  class WidgetLg extends Component {
 	render() {
 		const Button = ({ type }) => {
-			return <button className={"widgetLgButton " + type} >{type}</button>
-		}
+			return <button className={"widgetLgButton " + type} >{type}</button>;
+		};
 		return (
 			<div className="widgetLg widget">
 				<h3 className="widgetLgTitle">Latest transactions</h3>
@@ -28,7 +28,7 @@ export  class WidgetLg extends Component {
 					<tr className="widgetLgTr">
 						<td className="widgetLgUser">
 							<img src="https://themesbrand.com/velzon/html/default/assets/images/users/avatar-1.jpg" alt="" className="widgetLgImg" />
-						    <span className="widgetLgName">Susan Carol</span>
+							<span className="widgetLgName">Susan Carol</span>
 						</td>
 						<td className="widgetLgData">
 							2 Jun 2021
@@ -42,7 +42,7 @@ export  class WidgetLg extends Component {
 					<tr className="widgetLgTr">
 						<td className="widgetLgUser">
 							<img src="https://themesbrand.com/velzon/html/default/assets/images/users/avatar-1.jpg" alt="" className="widgetLgImg" />
-						    <span className="widgetLgName">Susan Carol</span>
+							<span className="widgetLgName">Susan Carol</span>
 						</td>
 						<td className="widgetLgData">
 							2 Jun 2021
@@ -57,7 +57,7 @@ export  class WidgetLg extends Component {
 					<tr className="widgetLgTr">
 						<td className="widgetLgUser">
 							<img src="https://themesbrand.com/velzon/html/default/assets/images/users/avatar-1.jpg" alt="" className="widgetLgImg" />
-						    <span className="widgetLgName">Susan Carol</span>
+							<span className="widgetLgName">Susan Carol</span>
 						</td>
 						<td className="widgetLgData">
 							2 Jun 2021
@@ -72,7 +72,7 @@ export  class WidgetLg extends Component {
 					<tr className="widgetLgTr">
 						<td className="widgetLgUser">
 							<img src="https://themesbrand.com/velzon/html/default/assets/images/users/avatar-1.jpg" alt="" className="widgetLgImg" />
-						    <span className="widgetLgName">Susan Carol</span>
+							<span className="widgetLgName">Susan Carol</span>
 						</td>
 						<td className="widgetLgData">
 							2 Jun 2021

@@ -1,11 +1,9 @@
-import React, { Component } from 'react';
 import './chart.scss';
 import {
   Chart as ChartJS,
   CategoryScale,
   LinearScale,
   BarElement,
-  Title,
   Tooltip,
   Legend,
 } from 'chart.js';
@@ -21,15 +19,13 @@ ChartJS.register(
 
 
 
-export default class Chart extends Component {
+export default function Chart():JSX.Element {
 
-	render() {
 			
 		return (
 			<div className="chart widget">
 			<h3 className="chartTitle">{this.props.title}</h3>
-				 <Bar  options={this.props.dataKey} data={this.props.data} />
+				<Bar options={this.props.dataKey} data={this.props.data} />
 			</div>
 		);
-	}
 }

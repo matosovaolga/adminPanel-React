@@ -7,21 +7,21 @@ export default function User(){
 	console.log(useLocation());
 	//const state = useLocation().state;
 	
- 	const [formData, setFormData] = useState({
- 		username: useLocation().state.username, 
- 		avatar: useLocation().state.avatar,
- 		position: useLocation().state.position, 
- 		birthday: useLocation().state.birthday, 
- 		phone: useLocation().state.phone, 
- 		map: useLocation().state.map, 
- 		email: useLocation().state.email,
- 		location: useLocation().state.location, 
- 		login: useLocation().state.login
- 	});
+	const [formData, setFormData] = useState({
+		username: useLocation().state.username, 
+		avatar: useLocation().state.avatar,
+		position: useLocation().state.position, 
+		birthday: useLocation().state.birthday, 
+		phone: useLocation().state.phone, 
+		map: useLocation().state.map, 
+		email: useLocation().state.email,
+		location: useLocation().state.location, 
+		login: useLocation().state.login
+	});
 
- 	const handleSubmit = (e) => {
- 		console.log(formData);
- 	}
+	const handleSubmit = () => {
+		console.log(formData);
+	};
 		return (
 			<div className="user">
 				<div className="userTitleContainer">
@@ -127,7 +127,7 @@ export default function User(){
 									<label htmlFor="file"><Publish  className="userUpdateIcon"/></label>
 									<input type="file" id="file" style={{display: "none"}} />
 								</div>
-								<a className="userUpdateButton" onClick={handleSubmit}>Update</a>
+								<span className="userUpdateButton" onClick={handleSubmit}>Update</span>
 							</div>
 						</form>
 					</div>

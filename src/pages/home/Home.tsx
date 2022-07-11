@@ -1,4 +1,3 @@
-import React, { Component } from 'react';
 import './home.scss';
 import FeaturedInfo from '../../components/featuredInfo/FeaturedInfo';
 import Chart from '../../components/chart/Chart';
@@ -9,9 +8,9 @@ import {WidgetLg} from '../../components/widgetLg/WidgetLg';
 const userAnalyticsTitle = 'User Analytics';
 
 
-export default class Home extends Component {
+export default function Home(): JSX.Element {
 
-	render() {
+
 		return (
 			<div className="home">
 				<FeaturedInfo  />
@@ -22,5 +21,4 @@ export default class Home extends Component {
 				</div>
 			</div>
 		);
-	}
 }
