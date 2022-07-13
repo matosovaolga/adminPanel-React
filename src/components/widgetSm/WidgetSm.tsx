@@ -1,13 +1,13 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './widgetSm.scss';
-import {VisibilityOutlined} from '@mui/icons-material';
+import { VisibilityOutlined } from '@mui/icons-material';
 
-export  class WidgetSm extends Component {
-	render() {
-		return (
-			<div className="widgetSm widget">
-				<span className="widgetSmTitle">New Join Members</span>
-				<ul className="widgetSmList">
+export function WidgetSm(): JSX.Element {
+
+	return (
+		<div className="widgetSm widget">
+			<span className="widgetSmTitle">New Join Members</span>
+			<ul className="widgetSmList">
 				<li className="widgetSmListItem">
 					<img className="widgetSmImg" src="https://themesbrand.com/velzon/html/default/assets/images/users/avatar-1.jpg" alt="" />
 					<div className="widgetSmUser">
@@ -63,8 +63,7 @@ export  class WidgetSm extends Component {
 						Display
 					</button>
 				</li>
-				</ul>
-			</div>
-		);
-	}
+			</ul>
+		</div>
+	);
 }

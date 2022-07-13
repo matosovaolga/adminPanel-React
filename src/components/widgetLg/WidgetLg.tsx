@@ -1,30 +1,30 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './widgetLg.scss';
 
-export  class WidgetLg extends Component {
-	render() {
-		const Button = ({ type }) => {
-			return <button className={"widgetLgButton " + type} >{type}</button>;
-		};
-		return (
-			<div className="widgetLg widget">
-				<h3 className="widgetLgTitle">Latest transactions</h3>
-				<table className="widgetLgTable">
-					<tbody>
-						<tr className="widgetLgTr">
-							<th className="widgetLgTh">
-								Customer
-							</th>
-							<th className="widgetLgTh">
-								Date
-							</th>
-							<th className="widgetLgTh">
-								Amount
-							</th>
-							<th className="widgetLgTh">
-								Status
-							</th>
-						</tr>
+export function WidgetLg(): JSX.Element {
+
+	const Button = () => {
+		// return <button className={"widgetLgButton " + type} >{type}</button>;
+	};
+	return (
+		<div className="widgetLg widget">
+			<h3 className="widgetLgTitle">Latest transactions</h3>
+			<table className="widgetLgTable">
+				<tbody>
+					<tr className="widgetLgTr">
+						<th className="widgetLgTh">
+							Customer
+						</th>
+						<th className="widgetLgTh">
+							Date
+						</th>
+						<th className="widgetLgTh">
+							Amount
+						</th>
+						<th className="widgetLgTh">
+							Status
+						</th>
+					</tr>
 					<tr className="widgetLgTr">
 						<td className="widgetLgUser">
 							<img src="https://themesbrand.com/velzon/html/default/assets/images/users/avatar-1.jpg" alt="" className="widgetLgImg" />
@@ -36,7 +36,7 @@ export  class WidgetLg extends Component {
 							$122.00
 						</td>
 						<td className="widgetLgStatus">
-							<Button type="Approved" />
+							{/* <Button type="Approved" /> */}
 						</td>
 					</tr>
 					<tr className="widgetLgTr">
@@ -50,7 +50,7 @@ export  class WidgetLg extends Component {
 							$122.00
 						</td>
 						<td className="widgetLgStatus">
-							<Button type="Declined" />
+							{/* <Button type="Declined" /> */}
 						</td>
 
 					</tr>
@@ -65,7 +65,7 @@ export  class WidgetLg extends Component {
 							$122.00
 						</td>
 						<td className="widgetLgStatus">
-							<Button type="Pending" />
+							{/* <Button type="Pending" /> */}
 						</td>
 
 					</tr>
@@ -80,12 +80,11 @@ export  class WidgetLg extends Component {
 							$122.00
 						</td>
 						<td className="widgetLgStatus">
-							<Button type="Approved" />
+							{/* <Button type="Approved" /> */}
 						</td>
 					</tr>
-					</tbody>
-				</table>
-			</div>
-		);
-	}
+				</tbody>
+			</table>
+		</div>
+	);
 }
