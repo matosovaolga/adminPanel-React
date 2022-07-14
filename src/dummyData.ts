@@ -1,3 +1,19 @@
+import { ChartOptions } from "chart.js";
+
+export interface IUserData {
+	id: number
+	username: string
+	login: string
+	email: string
+	status: string
+	transaction: string
+	phone: string
+	birthday: string
+	position: string
+	location: string
+	avatar: string
+}
+
 export const userData = {
 	labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
 	datasets: [
@@ -14,7 +30,7 @@ export const userData = {
 	],
 };
 
-export const userRows = [
+export const userRows: IUserData[] = [
 	{
 		id: 1,
 		username: 'Jon Snow',
@@ -141,23 +157,14 @@ export const userRows = [
 	}
 
 ];
-export default interface userOptionsProps {
-	responsive: boolean,
-	aspectRatio: number,
-	plugins: {
-		legend: {
-			position: string,
-		}
 
-	},
-}
 
-export const userOptions: userOptionsProps = {
+export const userOptions: ChartOptions = {
 	responsive: true,
 	aspectRatio: 3 / 1,
 	plugins: {
 		legend: {
-			position: 'top',
+			position: 'top' as const,
 		}
 
 	},

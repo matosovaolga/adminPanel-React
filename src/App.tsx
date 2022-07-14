@@ -2,7 +2,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import './App.scss';
+import styles from './App.module.scss';
 
 import Topbar from './components/topbar/Topbar';
 import Sidebar from './components/sidebar/Sidebar';
@@ -16,7 +16,7 @@ export default function App(): JSX.Element {
 	return (
 		<Router>
 			<Topbar />
-			<div className="container ">
+			<div className={styles.container}>
 				<Sidebar />
 				<Routes>
 					<Route>

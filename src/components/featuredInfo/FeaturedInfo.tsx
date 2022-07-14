@@ -1,37 +1,39 @@
-import './featuredInfo.scss';
-import { ArrowDownwardOutlined, ArrowUpwardOutlined } from '@mui/icons-material';
+import styles from './FeaturedInfo.module.scss';
+import { Widget } from '../Widget/Widget';
+import FeaturedItem from './FeatureItem/FeatureItem';
+import { FeatureItemProps } from './FeatureItem/FeatureItem.props';
+
+const featureData: FeatureItemProps[] = [
+	{
+		"money": 2.415,
+		"title": "Revanue",
+		"rate": -11.4
+	},
+	{
+		"money": 4.415,
+		"title": "Sales",
+		"rate": -1.4
+	},
+	{
+		"money": 2.225,
+		"title": "Cost",
+		"rate": 2.4
+	}
+]
 
 export default function FeaturedInfo(): JSX.Element {
 
 	return (
-		<div className="featured">
-			<div className="featuredItem widget">
-				<span className="featuredTitle">Revanue</span>
-				<div className="featuredMoneyContainer">
-					<span className="featuredMoney">$2,415</span>
-					<span className="featuredMoneyRate">-11.4
-						<ArrowDownwardOutlined className="featuredIcon negative" /></span>
-				</div>
-				<span className="featuredSub">Compared to last month</span>
-			</div>
-			<div className="featuredItem widget">
-				<span className="featuredTitle">Sales</span>
-				<div className="featuredMoneyContainer">
-					<span className="featuredMoney">$4,415</span>
-					<span className="featuredMoneyRate">-1.4
-						<ArrowDownwardOutlined className="featuredIcon negative" /></span>
-				</div>
-				<span className="featuredSub">Compared to last month</span>
-			</div>
-			<div className="featuredItem widget">
-				<span className="featuredTitle">Cost</span>
-				<div className="featuredMoneyContainer">
-					<span className="featuredMoney">$2,225</span>
-					<span className="featuredMoneyRate">2.4
-						<ArrowUpwardOutlined className="featuredIcon" /></span>
-				</div>
-				<span className="featuredSub">Compared to last month</span>
-			</div>
-		</div>
+		<div className={styles.featured}>
+			<>
+				{
+					featureData.map(m => (
+						<Widget key={m.title}>
+							<FeaturedItem {...m}></FeaturedItem>
+						</Widget>
+					))
+				}
+			</>
+		</div >
 	);
 }
