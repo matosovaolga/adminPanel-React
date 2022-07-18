@@ -23,9 +23,9 @@
 .icon {
 	font-size: 14px;
 	margin-left: 5px;
-	color: green;
+	color: var(--green);
 
 	&.negative {
-		color: red;
+		color: var(--red);
 	}
 }

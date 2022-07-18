@@ -1,90 +1,47 @@
 import React from 'react';
-import './widgetLg.scss';
+
+import styles from './widgetLg.module.scss';
+import { userRows } from '../../dummyData';
+import { Button } from '../Button/Button';
+
 
 export function WidgetLg(): JSX.Element {
-
-	const Button = () => {
-		// return <button className={"widgetLgButton " + type} >{type}</button>;
-	};
 	return (
-		<div className="widgetLg widget">
-			<h3 className="widgetLgTitle">Latest transactions</h3>
-			<table className="widgetLgTable">
-				<tbody>
-					<tr className="widgetLgTr">
-						<th className="widgetLgTh">
-							Customer
-						</th>
-						<th className="widgetLgTh">
-							Date
-						</th>
-						<th className="widgetLgTh">
-							Amount
-						</th>
-						<th className="widgetLgTh">
-							Status
-						</th>
-					</tr>
-					<tr className="widgetLgTr">
-						<td className="widgetLgUser">
-							<img src="https://themesbrand.com/velzon/html/default/assets/images/users/avatar-1.jpg" alt="" className="widgetLgImg" />
-							<span className="widgetLgName">Susan Carol</span>
-						</td>
-						<td className="widgetLgData">
-							2 Jun 2021
-						</td><td className="widgetLgAmount">
-							$122.00
-						</td>
-						<td className="widgetLgStatus">
-							{/* <Button type="Approved" /> */}
-						</td>
-					</tr>
-					<tr className="widgetLgTr">
-						<td className="widgetLgUser">
-							<img src="https://themesbrand.com/velzon/html/default/assets/images/users/avatar-1.jpg" alt="" className="widgetLgImg" />
-							<span className="widgetLgName">Susan Carol</span>
-						</td>
-						<td className="widgetLgData">
-							2 Jun 2021
-						</td><td className="widgetLgAmount">
-							$122.00
-						</td>
-						<td className="widgetLgStatus">
-							{/* <Button type="Declined" /> */}
-						</td>
-
-					</tr>
-					<tr className="widgetLgTr">
-						<td className="widgetLgUser">
-							<img src="https://themesbrand.com/velzon/html/default/assets/images/users/avatar-1.jpg" alt="" className="widgetLgImg" />
-							<span className="widgetLgName">Susan Carol</span>
-						</td>
-						<td className="widgetLgData">
-							2 Jun 2021
-						</td><td className="widgetLgAmount">
-							$122.00
-						</td>
-						<td className="widgetLgStatus">
-							{/* <Button type="Pending" /> */}
-						</td>
-
-					</tr>
-					<tr className="widgetLgTr">
-						<td className="widgetLgUser">
-							<img src="https://themesbrand.com/velzon/html/default/assets/images/users/avatar-1.jpg" alt="" className="widgetLgImg" />
-							<span className="widgetLgName">Susan Carol</span>
-						</td>
-						<td className="widgetLgData">
-							2 Jun 2021
-						</td><td className="widgetLgAmount">
-							$122.00
-						</td>
-						<td className="widgetLgStatus">
-							{/* <Button type="Approved" /> */}
-						</td>
-					</tr>
-				</tbody>
-			</table>
-		</div>
+		<table className={styles.table}>
+			<tbody>
+				<tr >
+					<th className={styles.th}>
+						Customer
+					</th>
+					<th className={styles.th}>
+						Date
+					</th>
+					<th className={styles.th}>
+						Amount
+					</th>
+					<th className={styles.th}>
+						Status
+					</th>
+				</tr>
+				{
+					userRows.filter(item => item.id < 5).map((item) => (
+						<tr key={item.id}>
+							<td className={styles.user}>
+								<img src={item.avatar} alt="" className={styles.img} />
+								<span className={styles.name}>{item.username}</span>
+							</td>
+							<td className={styles.date}>
+								{item.birthday}
+							</td>
+							<td className={styles.amount}>
+								{item.transaction}
+							</td>
+							<td>
+								<Button type={item.transactionStatus || 'default'}>{item.transactionStatus}</Button>
+							</td>
+						</tr>
+					))}
+			</tbody>
+		</table>
 	);
 }

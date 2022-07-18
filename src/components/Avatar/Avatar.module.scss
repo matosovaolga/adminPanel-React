@@ -1,0 +1,50 @@
+.btn {
+	display: flex;
+	align-items: center;
+	border-radius: 5px;
+	padding: 7px 10px;
+	cursor: pointer;
+	font-size: 13px;
+}
+
+.default {
+	background: var(--light-gray);
+	color: var(--gray);
+
+	&:hover {
+		background: var(--dark-blue);
+		color: var(--white);
+	}
+}
+
+.active {}
+
+.approved {
+	background-color: var(--light-green);
+	color: var(--green);
+
+	&:hover {
+		color: var(--light-green);
+		background-color: var(--green);
+	}
+}
+
+.decline {
+	background-color: var(--rose);
+	color: var(--red);
+
+	&:hover {
+		color: var(--rose);
+		background-color: var(--red);
+	}
+}
+
+.pending {
+	background-color: var(--light-blue);
+	color: var(--blue);
+
+	&:hover {
+		color: var(--light-blue);
+		background-color: var(--blue);
+	}
+}

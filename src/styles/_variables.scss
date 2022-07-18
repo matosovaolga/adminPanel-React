@@ -1,1 +1,15 @@
-$main-font-family: 'Nanum Gothic', sans-serif;
+:root {
+	--main-font: 'Nanum Gothic', sans-serif;
+	--blue: #405189;
+	--dark-blue: #303c66;
+	--light-blue: #deeeff;
+
+	--white: #fff;
+
+	--light-gray: #eeeef7;
+	--gray: #555;
+	--green: rgb(20, 137, 20);
+	--light-green: #e5faf2;
+	--red: rgb(174, 27, 27);
+	--rose: #fff0f1;
+}

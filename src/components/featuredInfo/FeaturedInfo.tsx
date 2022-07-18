@@ -28,7 +28,7 @@ export default function FeaturedInfo(): JSX.Element {
 			<>
 				{
 					featureData.map(m => (
-						<Widget key={m.title}>
+						<Widget size="sm" key={m.title}>
 							<FeaturedItem {...m}></FeaturedItem>
 						</Widget>
 					))

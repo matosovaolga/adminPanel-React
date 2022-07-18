@@ -1,0 +1,31 @@
+.img {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	object-fit: cover;
+	margin-right: 10px;
+}
+
+.table {
+	width: 100%;
+	border-spacing: 10px;
+	border-collapse: separate;
+}
+
+.th {
+	text-align: left;
+	font-size: 16px;
+}
+
+.user {
+	display: flex;
+	align-items: center;
+	font-weight: 600;
+	font-size: 14px;
+
+}
+
+.date,
+.amount {
+	font-weight: 300;
+}
