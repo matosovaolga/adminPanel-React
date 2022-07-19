@@ -2,7 +2,7 @@ import React from 'react';
 
 import styles from './widgetLg.module.scss';
 import { userRows } from '../../dummyData';
-import { Button } from '../Button/Button';
+import { Button } from '..';
 
 
 export function WidgetLg(): JSX.Element {
@@ -37,7 +37,7 @@ export function WidgetLg(): JSX.Element {
 								{item.transaction}
 							</td>
 							<td>
-								<Button type={item.transactionStatus || 'default'}>{item.transactionStatus}</Button>
+								<Button appearence={item.transactionStatus || 'default'}>{item.transactionStatus}</Button>
 							</td>
 						</tr>
 					))}

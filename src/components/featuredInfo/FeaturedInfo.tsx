@@ -28,7 +28,7 @@ export default function FeaturedInfo(): JSX.Element {
 			<>
 				{
 					featureData.map(m => (
-						<Widget size="sm" key={m.title}>
+						<Widget size="sm" key={m.title} className={styles.hasHoverEffect}>
 							<FeaturedItem {...m}></FeaturedItem>
 						</Widget>
 					))

@@ -1,6 +1,6 @@
-import { ReactNode } from "react";
+import { ButtonHTMLAttributes, DetailedHTMLProps, ReactNode } from "react";
 
-export interface ButtonProps {
-	type: 'default' | 'approved' | 'declined' | 'active' | 'pending';
+export interface ButtonProps extends DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement> {
+	appearence: 'default' | 'approved' | 'declined' | 'active' | 'pending';
 	children?: ReactNode;
 }

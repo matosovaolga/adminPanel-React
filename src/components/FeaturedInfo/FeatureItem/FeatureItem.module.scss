@@ -24,8 +24,8 @@
 	font-size: 14px;
 	margin-left: 5px;
 	color: var(--green);
+}
 
-	&.negative {
-		color: var(--red);
-	}
+.negative {
+	color: var(--red);
 }

@@ -1,6 +1,6 @@
-import { ReactNode } from "react";
+import { DetailedHTMLProps, HTMLAttributes, ReactNode } from "react";
 
-export interface WidgetProps {
+export interface WidgetProps extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
 	children: ReactNode;
 	size: 'sm' | 'm' | 'lg' | 'full';
 }

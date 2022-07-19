@@ -3,17 +3,18 @@ import { ButtonProps } from "./Button.props";
 import styles from './Button.module.scss';
 import cn from 'classnames';
 
-export const Button = ({ type, children }: ButtonProps): JSX.Element => {
+export const Button = ({ appearence, children, className, ...props }: ButtonProps): JSX.Element => {
 
 	return (
 		<button
-			className={cn(styles.btn, {
-				[styles.default]: type == 'default',
-				[styles.approved]: type == 'approved',
-				[styles.active]: type == 'active',
-				[styles.declined]: type == 'declined',
-				[styles.pending]: type == 'pending'
+			className={cn(styles.btn, className, {
+				[styles.default]: appearence == 'default',
+				[styles.approved]: appearence == 'approved',
+				[styles.active]: appearence == 'active',
+				[styles.declined]: appearence == 'declined',
+				[styles.pending]: appearence == 'pending'
 			})}
-		>{children}</button>
+			{...props}
+		> {children}</button >
 	);
 }

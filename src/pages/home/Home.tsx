@@ -11,9 +11,9 @@ import {
 	Legend,
 } from 'chart.js';
 import { Bar } from 'react-chartjs-2';
-import { Htag } from '../../components/Htag/Htag';
 import { Widget } from '../../components/Widget/Widget';
 import { NewUsers } from '../../components/NewUsers/NewUsers';
+import { Htag } from '../../components';
 
 ChartJS.register(
 	CategoryScale,
@@ -30,6 +30,8 @@ export default function Home(): JSX.Element {
 
 	return (
 		<div className={styles.home}>
+			<Htag tag="h1">Good Morning, Anna!</Htag>
+			<p>Here's what's happening with your store today.</p>
 			<FeaturedInfo />
 			<Widget size="full">
 				<Htag tag="h3">{userAnalyticsTitle}</Htag>

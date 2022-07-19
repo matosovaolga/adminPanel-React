@@ -4,3 +4,14 @@
 	justify-content: space-between;
 	margin-bottom: 30px;
 }
+
+.hasHoverEffect {
+	transition: all 0.2s ease-out;
+	position: relative;
+	top: 0;
+
+	&:hover {
+		top: -10px;
+		box-shadow: 0 5px 15px -10px rgba(0, 0, 0, 0.75);
+	}
+}

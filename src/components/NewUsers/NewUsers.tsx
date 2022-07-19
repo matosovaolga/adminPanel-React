@@ -2,8 +2,9 @@ import React from 'react';
 import './NewUsers.props';
 import styles from "./NewUsers.module.scss";
 import { VisibilityOutlined } from '@mui/icons-material';
-import { Button } from '../Button/Button';
+
 import { userRows } from '../../dummyData';
+import { Button } from '..';
 
 
 
@@ -23,7 +24,7 @@ export function NewUsers(): JSX.Element {
 								</div>
 
 							</div>
-							<Button type="default">
+							<Button appearence="default">
 								<VisibilityOutlined className={styles.btnIcon} />
 								Display
 							</Button>
