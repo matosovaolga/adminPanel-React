@@ -1,21 +1,7 @@
+import { faker } from "@faker-js/faker";
 import { ChartOptions } from "chart.js";
-import { ButtonProps } from "./components/Button/Button.props";
+import { IUserData } from "./interfaces/user.interface";
 
-export interface IUserData {
-	id: number
-	mark?: string
-	username: string
-	login: string
-	email: string
-	status: string
-	transaction: string
-	transactionStatus?: 'default' | 'approved' | 'declined' | 'active' | 'pending'
-	phone: string
-	birthday: string
-	position: string
-	location: string
-	avatar: string
-}
 
 export const userData = {
 	labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
@@ -36,137 +22,149 @@ export const userData = {
 export const userRows: IUserData[] = [
 	{
 		id: 1,
-		username: 'Jon Snow',
-		login: 'Jhone99',
-		email: 'jon@gmail.com',
+		username: `${faker.name.firstName()} ${faker.name.lastName()}`,
+		avatar: faker.image.avatar(),
+		login: faker.word.adjective().toUpperCase(),
+		email: `${faker.word.adjective()}@gmail.com`,
 		status: "active",
-		transaction: "$120.00",
-		transactionStatus: 'approved',
-		phone: '+1 890 900 000',
-		birthday: '20/01/1987',
-		position: 'Designer',
-		location: 'New York',
-		mark: 'new',
-		avatar: "https://themesbrand.com/velzon/html/default/assets/images/users/avatar-1.jpg"
+		transaction: faker.finance.amount(34, 1000, 2, '$'),
+		transactionStatus: 'pending',
+		phone: faker.phone.number(),
+		birthday: faker.date.past().toISOString().substring(0, 10),
+		position: faker.name.jobType(),
+		location: faker.address.cityName()
 	},
 	{
 		id: 2,
-		username: 'Jon Snow',
-		email: 'jon@gmail.com',
-		login: 'Jhone99',
+		username: `${faker.name.firstName()} ${faker.name.lastName()}`,
+		avatar: faker.image.avatar(),
+		login: faker.word.adjective().toUpperCase(),
+		email: `${faker.word.adjective()}@gmail.com`,
 		status: "active",
-		transactionStatus: 'approved',
-		transaction: "$120.00",
-		phone: '+1 890 900 000',
-		birthday: '20/01/1987',
-		position: 'Designer',
-		location: 'New York',
-		mark: 'new',
-		avatar: "https://themesbrand.com/velzon/html/default/assets/images/users/avatar-1.jpg"
+		transaction: faker.finance.amount(34, 1000, 2, '$'),
+		transactionStatus: 'declined',
+		phone: faker.phone.number(),
+		birthday: faker.date.past().toISOString().substring(0, 10),
+		position: faker.name.jobType(),
+		location: faker.address.cityName(),
+		mark: 'new'
 	},
-
 	{
 		id: 3,
-		username: 'Jon Snow',
-		email: 'jon@gmail.com',
-		login: 'Jhone99',
+		username: `${faker.name.firstName()} ${faker.name.lastName()}`,
+		avatar: faker.image.avatar(),
+		login: faker.word.adjective().toUpperCase(),
+		email: `${faker.word.adjective()}@gmail.com`,
 		status: "active",
-		transaction: "$120.00",
-		transactionStatus: 'declined',
-		phone: '+1 890 900 000',
-		birthday: '20/01/1987',
-		position: 'Designer',
-		location: 'New York',
-		mark: 'new',
-		avatar: "https://themesbrand.com/velzon/html/default/assets/images/users/avatar-1.jpg"
-	}, {
-		id: 4,
-		username: 'Jon Snow',
-		email: 'jon@gmail.com',
-		transactionStatus: 'pending',
-		login: 'Jhone99',
-		status: "active",
-		transaction: "$120.00",
-		phone: '+1 890 900 000',
-		birthday: '20/01/1987',
-		position: 'Designer',
-		location: 'New York',
-		avatar: "https://themesbrand.com/velzon/html/default/assets/images/users/avatar-1.jpg"
-	}, {
-		id: 5,
-		username: 'Jon Snow',
-		email: 'jon@gmail.com',
-		login: 'Jhone99',
-		status: "active",
+		transaction: faker.finance.amount(34, 1000, 2, '$'),
 		transactionStatus: 'approved',
-		transaction: "$120.00",
-		phone: '+1 890 900 000',
-		birthday: '20/01/1987',
-		position: 'Designer',
-		location: 'New York',
-		avatar: "https://themesbrand.com/velzon/html/default/assets/images/users/avatar-1.jpg"
-	}, {
+		phone: faker.phone.number(),
+		birthday: faker.date.past().toISOString().substring(0, 10),
+		position: faker.name.jobType(),
+		location: faker.address.cityName()
+	},
+	{
+		id: 4,
+		username: `${faker.name.firstName()} ${faker.name.lastName()}`,
+		avatar: faker.image.avatar(),
+		login: faker.word.adjective().toUpperCase(),
+		email: `${faker.word.adjective()}@gmail.com`,
+		status: "active",
+		transaction: faker.finance.amount(34, 1000, 2, '$'),
+		transactionStatus: 'pending',
+		phone: faker.phone.number(),
+		birthday: faker.date.past().toISOString().substring(0, 10),
+		position: faker.name.jobType(),
+		location: faker.address.cityName()
+	},
+	{
+		id: 5,
+		username: `${faker.name.firstName()} ${faker.name.lastName()}`,
+		avatar: faker.image.avatar(),
+		login: faker.word.adjective().toUpperCase(),
+		email: `${faker.word.adjective()}@gmail.com`,
+		status: "active",
+		transaction: faker.finance.amount(34, 1000, 2, '$'),
+		transactionStatus: 'approved',
+		phone: faker.phone.number(),
+		birthday: faker.date.past().toISOString().substring(0, 10),
+		position: faker.name.jobType(),
+		location: faker.address.cityName(),
+		mark: 'new'
+	},
+	{
 		id: 6,
-		username: 'Jon Snow',
-		email: 'jon@gmail.com',
-		login: 'Jhone99',
+		username: `${faker.name.firstName()} ${faker.name.lastName()}`,
+		avatar: faker.image.avatar(),
+		login: faker.word.adjective().toUpperCase(),
+		email: `${faker.word.adjective()}@gmail.com`,
 		status: "active",
-		transaction: "$120.00",
-		phone: '+1 890 900 000',
-		birthday: '20/01/1987',
-		position: 'Designer',
-		location: 'New York',
-		avatar: "https://themesbrand.com/velzon/html/default/assets/images/users/avatar-1.jpg"
-	}, {
+		transaction: faker.finance.amount(34, 1000, 2, '$'),
+		transactionStatus: 'approved',
+		phone: faker.phone.number(),
+		birthday: faker.date.past().toISOString().substring(0, 10),
+		position: faker.name.jobType(),
+		location: faker.address.cityName(),
+		mark: 'new'
+	},
+	{
 		id: 7,
-		username: 'Jon Snow',
-		login: 'Jhone99',
-		email: 'jon@gmail.com',
+		username: `${faker.name.firstName()} ${faker.name.lastName()}`,
+		avatar: faker.image.avatar(),
+		login: faker.word.adjective().toUpperCase(),
+		email: `${faker.word.adjective()}@gmail.com`,
 		status: "active",
-		transaction: "$120.00",
-		phone: '+1 890 900 000',
-		birthday: '20/01/1987',
-		position: 'Designer',
-		location: 'New York',
-		avatar: "https://themesbrand.com/velzon/html/default/assets/images/users/avatar-1.jpg"
-	}, {
+		transaction: faker.finance.amount(34, 1000, 2, '$'),
+		transactionStatus: 'approved',
+		phone: faker.phone.number(),
+		birthday: faker.date.past().toISOString().substring(0, 10),
+		position: faker.name.jobType(),
+		location: faker.address.cityName(),
+		mark: 'new'
+	},
+	{
 		id: 8,
-		username: 'Jon Snow',
-		login: 'Jhone99',
-		email: 'jon@gmail.com',
+		username: `${faker.name.firstName()} ${faker.name.lastName()}`,
+		avatar: faker.image.avatar(),
+		login: faker.word.adjective().toUpperCase(),
+		email: `${faker.word.adjective()}@gmail.com`,
 		status: "active",
-		transaction: "$120.00",
-		phone: '+1 890 900 000',
-		birthday: '20/01/1987',
-		position: 'Designer',
-		location: 'New York',
-		avatar: "https://themesbrand.com/velzon/html/default/assets/images/users/avatar-1.jpg"
-	}, {
+		transaction: faker.finance.amount(34, 1000, 2, '$'),
+		transactionStatus: 'approved',
+		phone: faker.phone.number(),
+		birthday: faker.date.past().toISOString().substring(0, 10),
+		position: faker.name.jobType(),
+		location: faker.address.cityName()
+	},
+	{
 		id: 9,
-		username: 'Jon Snow',
-		login: 'Jhone99',
-		email: 'jon@gmail.com',
+		username: `${faker.name.firstName()} ${faker.name.lastName()}`,
+		avatar: faker.image.avatar(),
+		login: faker.word.adjective().toUpperCase(),
+		email: `${faker.word.adjective()}@gmail.com`,
 		status: "active",
-		transaction: "$120.00",
-		phone: '+1 890 900 000',
-		birthday: '20/01/1987',
-		position: 'Designer',
-		location: 'New York',
-		avatar: "https://themesbrand.com/velzon/html/default/assets/images/users/avatar-1.jpg"
-	}, {
+		transaction: faker.finance.amount(34, 1000, 2, '$'),
+		transactionStatus: 'approved',
+		phone: faker.phone.number(),
+		birthday: faker.date.past().toISOString().substring(0, 10),
+		position: faker.name.jobType(),
+		location: faker.address.cityName()
+	},
+	{
 		id: 10,
-		username: 'Jon Snow',
-		login: 'Jhone99',
-		email: 'jon@gmail.com',
+		username: `${faker.name.firstName()} ${faker.name.lastName()}`,
+		avatar: faker.image.avatar(),
+		login: faker.word.adjective().toUpperCase(),
+		email: `${faker.word.adjective()}@gmail.com`,
 		status: "active",
-		transaction: "$220.00",
-		phone: '+1 890 900 000',
-		birthday: '20/01/1987',
-		mark: 'new',
-		position: 'Designer',
-		location: 'New York',
-		avatar: "https://themesbrand.com/velzon/html/default/assets/images/users/avatar-1.jpg"
+		transaction: faker.finance.amount(34, 1000, 2, '$'),
+		transactionStatus: 'approved',
+		phone: faker.phone.number(),
+		birthday: faker.date.past().toISOString().substring(0, 10),
+		position: faker.name.jobType(),
+		location: faker.address.cityName()
 	}
+
 
 ];
 

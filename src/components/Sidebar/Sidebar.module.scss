@@ -1,9 +1,10 @@
 .sidebar {
 	flex: 1;
-	height: calc(100vh - 70px);
+	height: calc(100vh);
 	background: #405189;
 	position: sticky;
-	top: 70px;
+	top: 0;
+	left: 0;
 
 	&Wrapper {
 		padding: 20px;

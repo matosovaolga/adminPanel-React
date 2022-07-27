@@ -1,4 +1,14 @@
 .h2 {
-  	font-size: 24px;
-	font-weight: bold;
+  font-size: 20px;
+  font-family: var(--main-font);
+}
+
+.h3 {
+  font-size: 16px;
+  font-weight: 600;
+  font-family: var(--main-font);
+}
+
+.h4 {
+  font-size: 15px;
 }

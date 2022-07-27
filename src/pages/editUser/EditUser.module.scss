@@ -1,0 +1,31 @@
+.editUser {
+	display: flex;
+}
+
+.sidebar {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+}
+
+.w_sidebar {
+	margin-bottom: 20px;
+}
+
+.content {
+	flex: 2;
+}
+
+.tabPanelContainer form {
+	display: flex;
+	gap: 20px;
+	flex-wrap: wrap;
+}
+
+.col_1 {
+	width: 48%;
+}
+
+.col_2 {
+	width: 100%;
+}

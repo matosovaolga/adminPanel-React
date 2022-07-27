@@ -17,4 +17,4 @@ export const Button = ({ appearence, children, className, ...props }: ButtonProp
 			{...props}
 		> {children}</button >
 	);
-}
+};

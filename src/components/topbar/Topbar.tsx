@@ -1,29 +1,43 @@
-import React from 'react';
-import "./topbar.scss";
-import { NotificationsNone, Language, Settings } from '@mui/icons-material';
-export default function Topbar(): JSX.Element {
+import styles from './TopBar.module.scss';
+import { TopBarProps } from "./TopBar.props";
+import { Language, Menu, NotificationsNone, Settings } from '@mui/icons-material';
+import { AvatarComponent, IButton } from '..';
+import { useState } from 'react';
 
+
+
+export const TopBar = ({ messages, ...props }: TopBarProps): JSX.Element => {
+	const [numberM, setNumberM] = useState(messages);
 	return (
-		<div className="topbar">
-			<div className="topbarWrapper">
-				<div className="topLeft">
-					<span className="logo">Lamaadmin</span>
-				</div>
-				<div className="topRight">
-					<div className="topbarIconContainer">
-						<NotificationsNone />
-						<span className="topbarIconBag ">2</span>
+		<header className={styles.topbar} {...props}>
+
+			<div className="topLeft" >
+				<IButton><Menu /></IButton>
+			</div>
+			<div className={styles.topRight}>
+
+				<IButton apperance='hoverBackground' className={styles.topbarIconContainer}>
+					<NotificationsNone />
+					<span className={styles.topbarIconBag}>{numberM}</span>
+				</IButton>
+				<IButton apperance='hoverBackground' className={styles.topbarIconContainer}>
+					<Language />
+					<span className={styles.topbarIconBag}>2</span>
+				</IButton>
+				<IButton apperance='hoverBackground' className={styles.topbarIconContainer}>
+					<Settings />
+				</IButton>
+				<div className={styles.userInfo}>
+					<AvatarComponent src='https://themesbrand.com/velzon/html/default/assets/images/users/avatar-1.jpg' />
+					<div className={styles.nameInfo}>
+						<span className={styles.name}>Anna Naman</span>
+						<span className={styles.position}>Founder</span>
 					</div>
-					<div className="topbarIconContainer">
-						<Language />
-						<span className="topbarIconBag ">2</span>
-					</div>
-					<div className="topbarIconContainer">
-						<Settings />
-					</div>
-					<img src="https://themesbrand.com/velzon/html/default/assets/images/users/avatar-1.jpg" alt="" className="topAvatar" />
+
+
 				</div>
 			</div>
-		</div>
+		</header>
+
 	);
-}
+};

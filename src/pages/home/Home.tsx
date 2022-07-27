@@ -30,7 +30,7 @@ export default function Home(): JSX.Element {
 
 	return (
 		<div className={styles.home}>
-			<Htag tag="h1">Good Morning, Anna!</Htag>
+			<Htag tag="h2">Good Morning, Anna!</Htag>
 			<p>Here's what's happening with your store today.</p>
 			<FeaturedInfo />
 			<Widget size="full">
