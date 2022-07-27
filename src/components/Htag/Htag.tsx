@@ -11,7 +11,10 @@ export const Htag = ({ tag, children, ...props }: HtagProps): JSX.Element => {
 			return <h2 className={styles.h2} {...props}>{children}</h2>;
 		case 'h3':
 			return <h3 className={styles.h3} {...props}>{children}</h3>;
+		case 'h4':
+			return <h4 className={styles.h4} {...props}>{children}</h4>;
+
 		default:
 			return <></>;
 	}
-}
+};

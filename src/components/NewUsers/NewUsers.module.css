@@ -1,0 +1,35 @@
+.img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-right: 20px;
+}
+
+.listItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+}
+.usernames {
+  font-size: 14px;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+}
+
+.position {
+  font-weight: 400;
+}
+
+.btnIcon {
+  margin-right: 5px;
+  font-size: 16px !important;
+}

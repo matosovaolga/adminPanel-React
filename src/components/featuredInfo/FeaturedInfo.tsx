@@ -19,7 +19,7 @@ const featureData: FeatureItemProps[] = [
 		"title": "Cost",
 		"rate": 2.4
 	}
-]
+];
 
 export default function FeaturedInfo(): JSX.Element {
 

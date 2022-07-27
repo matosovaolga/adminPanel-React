@@ -1,6 +1,6 @@
 export * from './Htag/Htag';
 export * from './Button/Button';
-// export * from './FeaturedInfo/FeaturedInfo';
-// export * from './Topbar/Topbar';
-// export * from './Widget/Widget';
-
+export * from './TopBar/TopBar';
+export * from './IButton/IButton';
+export * from './AvatarComponent/AvatarComponent';
+export * from './Sidebar/Sidebar';
