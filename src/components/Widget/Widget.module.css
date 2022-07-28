@@ -2,5 +2,18 @@
   box-shadow: 0 0 15px -10px rgba(0, 0, 0, 0.75);
   margin: 0 20px;
   padding: 30px;
-  border-radius: 10px;
+  border-radius: 5px;
+  background-color: var(--white);
+}
+
+.sm {
+  flex: 1;
+}
+
+.m {
+  flex: 2;
+}
+
+.full {
+  margin: 20px;
 }
