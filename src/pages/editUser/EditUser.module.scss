@@ -1,19 +1,23 @@
 .editUser {
 	display: flex;
+	background: var(--light-gray);
 }
 
 .sidebar {
 	display: flex;
 	flex-direction: column;
 	flex: 1;
+
 }
 
 .w_sidebar {
 	margin-bottom: 20px;
+
 }
 
 .content {
 	flex: 2;
+	background-color: var(--white);
 }
 
 .tabPanelContainer form {
@@ -28,4 +32,30 @@
 
 .col_2 {
 	width: 100%;
+}
+
+.social {
+	&Portfolio {
+		display: flex;
+		align-items: center;
+		margin: 7px 0;
+	}
+
+	&Icon {
+		margin-right: 10px;
+	}
+}
+
+.buttonPannel {
+	display: flex;
+	width: 100%;
+	justify-content: flex-end;
+
+	button {
+		margin-left: 25px;
+
+		&.cancelBtn:hover {
+			color: var(--white);
+		}
+	}
 }

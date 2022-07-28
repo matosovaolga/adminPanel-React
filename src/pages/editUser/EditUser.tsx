@@ -1,6 +1,6 @@
 import { faker } from "@faker-js/faker";
-import { AddOutlined, GitHub, ModeEditOutlineOutlined } from "@mui/icons-material";
-import { Avatar, Box, Chip, Slider, Tab, Tabs, TextField, Typography } from "@mui/material";
+import { AddOutlined, GitHub, LanguageOutlined, ModeEditOutlineOutlined, Pinterest, Twitter } from "@mui/icons-material";
+import { Avatar, Box, Button, Chip, OutlinedInput, Slider, Tab, Tabs, TextField } from "@mui/material";
 import React from "react";
 import { Htag } from "../../components";
 import { Widget } from "../../components/Widget/Widget";
@@ -26,7 +26,7 @@ function TabPanel(props: TabPanelProps) {
 		>
 			{value === index && (
 				<Box sx={{ p: 3 }}>
-					<Typography>{children}</Typography>
+					{children}
 				</Box>
 			)}
 		</div>
@@ -70,43 +70,38 @@ export default function EditUser(): JSX.Element {
 						label="Custom delete icon"
 						deleteIcon={<AddOutlined />}
 					/>
-					<p>
-						<GitHub />
-						<TextField
-							id="outlined-basic"
-							hiddenLabel
-							variant="outlined"
+					<div className={styles.socialPortfolio}>
+						<GitHub className={styles.socialIcon} />
+						<OutlinedInput
 							value="@daveadame"
 							size="small"
+							fullWidth
 						/>
-					</p>
-					<p>
-						<TextField
-							id="outlined-basic"
-							hiddenLabel
-							variant="outlined"
+					</div>
+					<div className={styles.socialPortfolio}>
+						<Pinterest className={styles.socialIcon} />
+						<OutlinedInput
 							value="www.velzon.com"
 							size="small"
+							fullWidth
 						/>
-					</p>
-					<p>
-						<TextField
-							id="outlined-basic"
-							hiddenLabel
-							variant="outlined"
+					</div>
+					<div className={styles.socialPortfolio}>
+						<Twitter className={styles.socialIcon} />
+						<OutlinedInput
+							fullWidth
 							value="@dave_adame"
 							size="small"
 						/>
-					</p>
-					<p>
-						<TextField
-
-							hiddenLabel
-							variant="outlined"
+					</div>
+					<div className={styles.socialPortfolio}>
+						<LanguageOutlined className={styles.socialIcon} />
+						<OutlinedInput
 							value="Advance Dave"
 							size="small"
+							fullWidth
 						/>
-					</p>
+					</div>
 
 				</Widget>
 			</div>
@@ -121,13 +116,18 @@ export default function EditUser(): JSX.Element {
 				</Box>
 				<TabPanel value={value} index={0}>
 					<div className={styles.tabPanelContainer}>
-						<form>
+						<Box
+							component="form"
+							sx={{
+								'& .MuiTextField-root': { m: 1, width: '25ch' },
+							}}
+							noValidate
+							autoComplete="off"
+						>
 							<div className={styles.col_1}>
 								<label>First Name</label>
-								<TextField
-									hiddenLabel
+								<OutlinedInput
 									placeholder="First Name"
-									variant="outlined"
 									required
 									value="Dava"
 									size="small"
@@ -136,10 +136,8 @@ export default function EditUser(): JSX.Element {
 							</div>
 							<div className={styles.col_1}>
 								<label>Last Name</label>
-								<TextField
-									hiddenLabel
+								<OutlinedInput
 									placeholder="Last Name"
-									variant="outlined"
 									required
 									value="Dava 9999"
 									size="small"
@@ -147,11 +145,9 @@ export default function EditUser(): JSX.Element {
 								/>
 							</div>
 							<div className={styles.col_1}>
-								<label></label>
-								<TextField
-									hiddenLabel
+								<label>Phone Number</label>
+								<OutlinedInput
 									placeholder="First Name"
-									variant="outlined"
 									required
 									value="+1 (098) 7767645"
 									size="small"
@@ -160,22 +156,56 @@ export default function EditUser(): JSX.Element {
 								/>
 							</div>
 							<div className={styles.col_1}>
-								<label></label>
-								<TextField hiddenLabel label="Outlined" variant="outlined" />
+								<label>Email Address</label>
+								<OutlinedInput
+									size="small"
+									fullWidth
+								/>
 							</div>
 							<div className={styles.col_2}>
-								<label></label>
-								<TextField id="outlined-basic" label="Outlined" variant="outlined" />
+								<label>Joining Date</label>
+								<OutlinedInput
+									size="small"
+									type="date"
+									value='1986-07-22'
+									fullWidth
+								/>
 							</div>
-							<div>
-								<label></label>
-								<TextField id="outlined-basic" label="Outlined" variant="outlined" />
+							<div className={styles.col_1}>
+								<label>Designation</label>
+								<OutlinedInput
+									size="small"
+									fullWidth
+									value='Lead Designer / Developer'
+								/>
 							</div>
-							<div>
-								<label></label>
-								<TextField id="outlined-basic" label="Outlined" variant="outlined" />
+							<div className={styles.col_1}>
+								<label>Website</label>
+								<OutlinedInput
+									size="small"
+									fullWidth
+									value='www.velzon.com'
+								/>
 							</div>
-						</form>
+							<div className={styles.col_2}>
+								<label>Description</label>
+								<TextField
+
+									style={{ width: '100%', margin: '10px 0' }}
+
+									multiline
+									rows={4}
+									hiddenLabel
+									value="Hi I' m Anna Adame,It will be as simple as Occidental; in fact, it will be Occidental.To an English person, it will seem like simplified English, as a skeptical Cambridge friend of mine told me what Occidental is European languages are members of the same family."
+								/>
+							</div>
+							<div className={styles.buttonPannel}>
+								<Button variant="contained">Updates</Button>
+								<Button variant="contained" color="secondary" className={styles.cancelBtn}>Cancel</Button>
+							</div>
+
+						</Box>
+
 					</div>
 				</TabPanel>
 				<TabPanel value={value} index={1}>
