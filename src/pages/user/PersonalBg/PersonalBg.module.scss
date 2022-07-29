@@ -1,0 +1,31 @@
+.personalBg {
+	width: 100%;
+	position: relative;
+	height: 260px;
+	overflow: hidden;
+
+	&:before {
+		content: "";
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		z-index: 2;
+		opacity: .7;
+		background: var(--blue);
+		background: -webkit-gradient(linear, left bottom, left top, from(var(--dark-blue)), to(var(--blue)));
+		background: linear-gradient(to top, var(--dark-blue), var(--blue));
+	}
+}
+
+.openFile {
+	opacity: 0;
+	width: 0;
+
+	&Icon {
+		position: absolute;
+		right: 20px;
+		top: 20px;
+	}
+}

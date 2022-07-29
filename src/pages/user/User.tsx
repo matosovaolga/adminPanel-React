@@ -1,4 +1,4 @@
-import "./user.scss";
+import styles from "./user.module.scss";
 // import { PermIdentity, CalendarToday, PhoneIphone, MailOutline, LocationOn, Publish } from '@mui/icons-material';
 // import { useLocation, Link } from "react-router-dom";
 // import React, { useState } from 'react';
