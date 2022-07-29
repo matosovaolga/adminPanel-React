@@ -1,12 +1,17 @@
 .editUser {
 	display: flex;
 	background: var(--light-gray);
+	flex-wrap: wrap;
 }
 
 .sidebar {
 	display: flex;
 	flex-direction: column;
 	flex: 1;
+	position: relative;
+	z-index: 3;
+
+	margin-top: -30px;
 
 }
 
@@ -15,35 +20,43 @@
 
 }
 
+.buttonPannel {
+	display: flex;
+	width: 100%;
+	justify-content: flex-end;
+}
+
+.headingAvatar {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 20px;
+
+	.avatar {
+		width: 120px;
+		height: 120px;
+		margin-bottom: 20px;
+		border: 6px solid var(--light-gray);
+	}
+}
+
 .content {
 	flex: 2;
 	background-color: var(--white);
+	position: relative;
+	z-index: 3;
+	margin-right: 20px;
+	margin-top: -30px;
 }
 
-.tabPanelContainer form {
+.socialPortfolio {
 	display: flex;
-	gap: 20px;
-	flex-wrap: wrap;
+	align-items: center;
+	margin: 7px 0;
 }
 
-.col_1 {
-	width: 48%;
-}
-
-.col_2 {
-	width: 100%;
-}
-
-.social {
-	&Portfolio {
-		display: flex;
-		align-items: center;
-		margin: 7px 0;
-	}
-
-	&Icon {
-		margin-right: 10px;
-	}
+.socialIcon {
+	margin-right: 10px;
 }
 
 .buttonPannel {
@@ -53,9 +66,5 @@
 
 	button {
 		margin-left: 25px;
-
-		&.cancelBtn:hover {
-			color: var(--white);
-		}
 	}
 }

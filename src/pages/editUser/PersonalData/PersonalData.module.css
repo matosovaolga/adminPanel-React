@@ -1,0 +1,22 @@
+.tabPanelContainer form {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.col_1 {
+  width: 48%;
+}
+
+.col_2 {
+  width: 100%;
+}
+
+.socialPortfolio {
+  display: flex;
+  align-items: center;
+  margin: 7px 0;
+}
+.socialIcon {
+  margin-right: 10px;
+}

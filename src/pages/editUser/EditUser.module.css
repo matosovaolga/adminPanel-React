@@ -1,35 +1,48 @@
 .editUser {
   display: flex;
   background: var(--light-gray);
+  flex-wrap: wrap;
 }
 
 .sidebar {
   display: flex;
   flex-direction: column;
   flex: 1;
+  position: relative;
+  z-index: 3;
+  margin-top: -30px;
 }
 
 .w_sidebar {
   margin-bottom: 20px;
 }
 
+.buttonPannel {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+}
+
+.headingAvatar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+.headingAvatar .avatar {
+  width: 120px;
+  height: 120px;
+  margin-bottom: 20px;
+  border: 6px solid var(--light-gray);
+}
+
 .content {
   flex: 2;
   background-color: var(--white);
-}
-
-.tabPanelContainer form {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.col_1 {
-  width: 48%;
-}
-
-.col_2 {
-  width: 100%;
+  position: relative;
+  z-index: 3;
+  margin-right: 20px;
+  margin-top: -30px;
 }
 
 .socialPortfolio {
@@ -37,6 +50,7 @@
   align-items: center;
   margin: 7px 0;
 }
+
 .socialIcon {
   margin-right: 10px;
 }
@@ -48,7 +62,4 @@
 }
 .buttonPannel button {
   margin-left: 25px;
-}
-.buttonPannel button.cancelBtn:hover {
-  color: var(--white);
 }
